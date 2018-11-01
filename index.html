@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" href="style.css">
+   <link href="https://fonts.googleapis.com/css?family=Chelsea+Market" rel="stylesheet">
+   <title>Game: rock&paper&scissors</title>
+</head>
+
+<body>
+   <div class="container flex_column">
+      <h1>ROCK, PAPER, SCISSORS GAME</h1>
+      <div id="summary">
+         <div>Summary:</div>
+         <h2 id="totalWinner"></h2>
+         <button id="startNewGame">Start new game!</button>
+      </div>
+      <h2>Choose Your option:</h2>
+      <div class="flex_row">
+         <img data-option="rock" src="./images/rock.png" alt="rock">
+         <img data-option="paper" src="./images/paper.png" alt="paper">
+         <img data-option="scissors" src="./images/scissors.png" alt="scissors">
+      </div>
+      <button id="play">Let's play!</button>
+      <div class="flex_row">
+         <div class="flex_column textAlignLeft">
+            <h2>RESULTS</h2>
+            <h3>Your choice: <span id="playerChoice"></span></h3>
+            <h3>Computer's choice: <span id="cpuChoice"></span></h3>
+            <h2>WINNER</h2>
+            <div id="partWinner"></div>
+         </div>
+         <div class="flex_column textAlignLeft">
+            <h2>STATISTICS</h2>
+            <h3>Your games won: <span id="playerWonStats">0</span></h3>
+            <h3>Computer's games won: <span id="cpuWonStats">0</span></h3>
+            <h3>Draws: <span id="drawStats">0</span></h3>
+         </div>
+      </div>
+   </div>
+
+   <script src="main.js"></script>
+</body>
+
+</html>
