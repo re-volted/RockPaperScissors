@@ -35,6 +35,10 @@ img {
     box-sizing: border-box;
 }
 
+img:hover {
+    opacity: 0.8;
+}
+
 button {
     display: block;
     background-color: #fff;
@@ -70,17 +74,21 @@ button:hover {
     flex-direction: row;
     align-items: center;
     width: 100%;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-start;
     margin-top: 3rem;
+
 }
 
 #summary {
-    position: fixed;
+    /* position: fixed;
     top: 100px;
     width: 90vw;
-    height: 50vh;
-    background-color: rgba(35, 142, 192, 0.8);
+    height: 50vh; */
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
     display: none;
     flex-direction: column;
     flex-wrap: wrap;
@@ -92,6 +100,7 @@ button:hover {
     text-align: left;
     align-items: unset;
     width: 40%;
+    margin-bottom: 2rem;
 }
 
 .winner {
@@ -112,10 +121,24 @@ button:hover {
         height: 25vw;
     }
 
-    #summary {
-        position: fixed;
-        top: 0;
-        width: 100vw;
-        height: 100vh;
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    h3 {
+        font-size: 14px;
+    }
+
+    #totalWinner {
+        width: 80%;
+    }
+
+    .textAlignLeft {
+        padding-left: 0.5rem;
+        border-left: 1px solid black;
     }
 }

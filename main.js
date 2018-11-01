@@ -29,12 +29,6 @@ images.forEach(image => {
       })
       image.style.boxShadow = "0 0 0 2px black";
    })
-   image.addEventListener('mouseenter', (e) => {
-      e.target.style.opacity = 0.8;
-   })
-   image.addEventListener('mouseleave', (e) => {
-      e.target.style.opacity = 1;
-   })
 })
 
 function randomizeCpuChoice() {
@@ -75,8 +69,10 @@ function endGame(player, cpu) {
    if (player === numberOfGames || cpu === numberOfGames) {
       summary.style.display = "flex";
       if (player === numberOfGames) {
+         summary.style.backgroundColor = "rgba(35, 192, 61, 0.8)";
          totalWinner.textContent = `Congratulations! You won whole game!`;
       } else if (cpu === numberOfGames) {
+         summary.style.backgroundColor = "rgba(192, 35, 35, 0.8)";
          totalWinner.textContent = `Unfortunately! You lost whole game!`;
       }
    }
@@ -86,10 +82,12 @@ function beginNewGame() {
    game.playerPoints = 0;
    game.cpuPoints = 0;
    game.draws = 0;
-   partWinner.textContent = "";
-   totalWinner.textContent = "";
-   playerChoiceSpan.textContent = "";
-   cpuChoiceSpan.textContent = "";
+   partWinner.textContent = "-";
+   partWinner.classList.remove('winner');
+   partWinner.classList.remove('loser');
+   totalWinner.textContent = "-";
+   playerChoiceSpan.textContent = "-";
+   cpuChoiceSpan.textContent = "-";
    statsUpdate();
    resetPlayerChoice();
    summary.style.display = "none";
